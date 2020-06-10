@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DisplayQRcodeView" customModule="dsb">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="grl-E5-dkh">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="230"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kLA-4e-H0P">
+                            <rect key="frame" x="10" y="10" width="300" height="210"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jkc-7P-aVs">
+                                    <rect key="frame" x="50" y="5" width="200" height="200"/>
+                                    <color key="backgroundColor" red="0.98823529409999999" green="0.37254901959999998" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="200" id="VPh-45-RpY"/>
+                                        <constraint firstAttribute="height" constant="200" id="j6t-u8-ywW"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="jkc-7P-aVs" firstAttribute="centerX" secondItem="kLA-4e-H0P" secondAttribute="centerX" id="anH-nD-1TB"/>
+                                <constraint firstItem="jkc-7P-aVs" firstAttribute="centerY" secondItem="kLA-4e-H0P" secondAttribute="centerY" id="irV-sK-sfT"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="kLA-4e-H0P" firstAttribute="top" secondItem="grl-E5-dkh" secondAttribute="top" constant="10" id="Kes-Gs-wWe"/>
+                        <constraint firstAttribute="trailing" secondItem="kLA-4e-H0P" secondAttribute="trailing" constant="10" id="Ofu-jA-qAZ"/>
+                        <constraint firstAttribute="bottom" secondItem="kLA-4e-H0P" secondAttribute="bottom" constant="10" id="mu9-HW-rDp"/>
+                        <constraint firstItem="kLA-4e-H0P" firstAttribute="leading" secondItem="grl-E5-dkh" secondAttribute="leading" constant="10" id="qT3-gM-YZ9"/>
+                        <constraint firstAttribute="height" constant="230" id="xxj-7q-52w"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="grl-E5-dkh" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="8TA-PY-MiJ"/>
+                <constraint firstItem="grl-E5-dkh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="CPF-oR-Mve"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="grl-E5-dkh" secondAttribute="bottom" constant="1" id="EI3-MB-3eI"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="grl-E5-dkh" secondAttribute="trailing" id="jls-Wy-XWn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="qrcodeImageView" destination="jkc-7P-aVs" id="HQ0-eY-gaZ"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="152.44565217391306"/>
+        </view>
+    </objects>
+</document>

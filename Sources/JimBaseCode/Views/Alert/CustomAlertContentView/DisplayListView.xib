@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DisplayListView" customModule="dsb">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aDK-Ho-7jm">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fdm-jl-faA" userLabel="item">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                            <subviews>
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bNL-Tb-M0y" customClass="ShadowView" customModule="dsb" customModuleProvider="target">
+                                    <rect key="frame" x="10" y="10" width="300" height="60"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jOs-73-174">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="60"/>
+                                            <subviews>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BXf-X5-CXQ" userLabel="色塊">
+                                                    <rect key="frame" x="0.0" y="0.0" width="10" height="60"/>
+                                                    <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="10" id="dsL-nn-dwq"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="支付宝:0.9%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQm-jy-iC5">
+                                                    <rect key="frame" x="10" y="0.0" width="290" height="60"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstItem="BXf-X5-CXQ" firstAttribute="leading" secondItem="jOs-73-174" secondAttribute="leading" id="3Sb-HP-6CB"/>
+                                                <constraint firstItem="bQm-jy-iC5" firstAttribute="top" secondItem="jOs-73-174" secondAttribute="top" id="9Zq-UX-Kfs"/>
+                                                <constraint firstAttribute="bottom" secondItem="bQm-jy-iC5" secondAttribute="bottom" id="WVp-h5-a3v"/>
+                                                <constraint firstAttribute="bottom" secondItem="BXf-X5-CXQ" secondAttribute="bottom" id="bie-Bt-DLa"/>
+                                                <constraint firstAttribute="trailing" secondItem="bQm-jy-iC5" secondAttribute="trailing" id="bwX-uU-MqD"/>
+                                                <constraint firstItem="BXf-X5-CXQ" firstAttribute="top" secondItem="jOs-73-174" secondAttribute="top" id="cPG-LU-mhR"/>
+                                                <constraint firstItem="bQm-jy-iC5" firstAttribute="leading" secondItem="BXf-X5-CXQ" secondAttribute="trailing" id="xkk-rQ-3VJ"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="jOs-73-174" secondAttribute="trailing" id="0EO-AS-C5g"/>
+                                        <constraint firstAttribute="bottom" secondItem="jOs-73-174" secondAttribute="bottom" id="RSc-t1-QVv"/>
+                                        <constraint firstItem="jOs-73-174" firstAttribute="top" secondItem="bNL-Tb-M0y" secondAttribute="top" id="Yn0-7X-dAe"/>
+                                        <constraint firstItem="jOs-73-174" firstAttribute="leading" secondItem="bNL-Tb-M0y" secondAttribute="leading" id="uKQ-01-N5t"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="bNL-Tb-M0y" firstAttribute="leading" secondItem="fdm-jl-faA" secondAttribute="leading" constant="10" id="CMA-Mb-uwd"/>
+                                <constraint firstAttribute="trailing" secondItem="bNL-Tb-M0y" secondAttribute="trailing" constant="10" id="JoQ-W3-Zbz"/>
+                                <constraint firstAttribute="bottom" secondItem="bNL-Tb-M0y" secondAttribute="bottom" constant="10" id="Sho-Ve-icr"/>
+                                <constraint firstItem="bNL-Tb-M0y" firstAttribute="top" secondItem="fdm-jl-faA" secondAttribute="top" constant="10" id="W1O-fq-kFL"/>
+                                <constraint firstAttribute="height" constant="80" id="oLJ-ED-fLR"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="aDK-Ho-7jm" secondAttribute="trailing" id="I1v-ZI-OCn"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="aDK-Ho-7jm" secondAttribute="bottom" constant="1" id="LiR-H1-l2y"/>
+                <constraint firstItem="aDK-Ho-7jm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="OiQ-XL-OMn"/>
+                <constraint firstItem="aDK-Ho-7jm" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="vQw-l7-R9u"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="inView" destination="jOs-73-174" id="nKY-gD-cwX"/>
+                <outlet property="shadowView" destination="bNL-Tb-M0y" id="nkk-mp-a8n"/>
+                <outlet property="showLabel" destination="bQm-jy-iC5" id="sUQ-dr-eo7"/>
+            </connections>
+            <point key="canvasLocation" x="114.49275362318842" y="130.43478260869566"/>
+        </view>
+    </objects>
+</document>
